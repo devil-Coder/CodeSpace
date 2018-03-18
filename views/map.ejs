@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> RAW </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel='stylesheet' href='/stylesheets/map.js.css'/>
+    <link rel='stylesheet' href='/stylesheets/index.css'/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <style>
+        @font-face {
+            font-family: Dense;
+            src: url(../assets/fonts/Dense-Regular.otf);
+        }
+
+        body{
+            font-family: Dense;
+            background : url('/images/screenA.jpg') no-repeat;
+            background-color : #000;
+            height : 100%;
+            width : 100%;
+        }
+
+             /* Always set the map height explicitly to define the size of the div
+              * element that contains the map. */
+         #map {
+             height: 500px;
+             width : 100%;
+             border : 2px solid #20634d;
+         }
+    </style>
+</head>
+<body onload = "drop();">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 padded-content text-center">DASHBOARD</div>
+        <div class="col-lg-8 col1">
+            <div id="map" onload="drop()"></div>
+        </div>
+        <div class="col-lg-4 regiment-cont col2">
+            <div class="reg-status centered text-uppercase">
+                <div class="input-cont-reg">
+                    <div type="text" class="input-box-reg"></div>
+                    <div type="text" class="input-text-reg">
+                        <div class="float-left text-uppercase text-center id">Regiment Status </div>
+                    </div>
+                </div>
+            </div>
+            <div class="each-reg">
+                <div class="row1 px1">
+                    <div class="name">Raj Chandra</div>
+                    <div class="footer text-uppercase">
+                        <div class="status float-left">
+                            <div class="" style="color : #27d45e; font-size : 16px;">Status : alive</div>
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="distance float-right">
+                            <div class="" style="color : #27d45e; font-size : 16px;">13.5 <span class="text-lowercase">m</span> Away</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row2 px2">
+                    <button class="btn btn-outline-danger remove-btn text-uppercase btn-lg">ALERT</button>
+                </div>
+            </div>
+            <div class="each-reg">
+                <div class="row1 px1">
+                    <div class="name">Harsha</div>
+                    <div class="footer text-uppercase">
+                        <div class="status float-left">
+                            <div class="" style="color : #27d45e; font-size : 16px;">Status : alive</div>
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="distance float-right">
+                            <div class="" style="color : #27d45e; font-size : 16px;">13.5 <span class="text-lowercase">m</span> Away</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row2 px2">
+                    <button class="btn btn-outline-danger remove-btn text-uppercase btn-lg">ALERT</button>
+                </div>
+            </div><div class="each-reg">
+                <div class="row1 px1">
+                    <div class="name">Ansh</div>
+                    <div class="footer text-uppercase">
+                        <div class="status float-left">
+                            <div class="" style="color : #27d45e; font-size : 16px;">Status : alive</div>
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="distance float-right">
+                            <div class="" style="color : #27d45e; font-size : 16px;">13.5 <span class="text-lowercase">m</span> Away</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row2 px2">
+                    <button class="btn btn-outline-danger remove-btn text-uppercase btn-lg">ALERT</button>
+                </div>
+            </div><div class="each-reg">
+                <div class="row1 px1">
+                    <div class="name">Hemant</div>
+                    <div class="footer text-uppercase">
+                        <div class="status float-left">
+                            <div class="" style="color : #27d45e; font-size : 16px;">Status : alive</div>
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="distance float-right">
+                            <div class="" style="color : #27d45e; font-size : 16px;">13.5 <span class="text-lowercase">m</span> Away</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row2 px2">
+                    <button class="btn btn-outline-danger remove-btn text-uppercase btn-lg">ALERT</button>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-outline-danger remove-btn text-center text-uppercase btn-lg">CALL ALERT</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function(){
+        $.ajax({url: "/", success: function(result){
+                var neighborhoods = results;
+            }});
+    });
+    neighborhoods = [
+        {lat: 12.92990176, lng: 79.15859113},
+        {lat: 12.93525559, lng: 79.10640607},
+        {lat: 12.92479879, lng: 79.09962545},
+        {lat: 12.92889791, lng: 79.10571943}
+    ];
+    var markers = [];
+    var map;
+    function initMap() {
+        console.log("Inititated");
+        // Styles a map in night mode.
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 12.93525559, lng: 79.10640607},
+            zoom: 13,
+            styles: [
+                {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'geometry',
+                    stylers: [{color: '#263c3f'}]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#6b9a76'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{color: '#38414e'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#212a37'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#9ca5b3'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{color: '#746855'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#1f2835'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#f3d19c'}]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'geometry',
+                    stylers: [{color: '#2f3948'}]
+                },
+                {
+                    featureType: 'transit.station',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'geometry',
+                    stylers: [{color: '#17263c'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#515c6d'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{color: '#17263c'}]
+                }
+            ]
+        });
+    }
+    function drop() {
+        console.log("dropped");
+        clearMarkers();
+        for (var i = 0; i < neighborhoods.length; i++) {
+            addMarkerWithTimeout(neighborhoods[i], i * 200);
+        }
+    }
+
+    function addMarkerWithTimeout(position, timeout) {
+        console.log("Added marker");
+        window.setTimeout(function () {
+            markers.push(new google.maps.Marker({
+                position: position,
+                map: map,
+                animation: google.maps.Animation.DROP
+            }));
+        }, timeout);
+    }
+
+    function clearMarkers() {
+        console.log("cleared");
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+        }
+        markers = [];
+    }
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6pzh7K_Cpo4NSubwAqURIbWQXl91ogtw&callback=initMap"
+        async defer></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Dense;
+    src: url(../assets/fonts/Dense-Regular.otf);
+}
+.row1{
+    padding : 48px 48px 48px 48px;
+    font-size : 24px;
+}
+.input-box-row1{
+    font-family : Dense;
+    padding : 17px;
+    opacity : 0.2;
+    color : #9DFF9E;
+    background-color : #675E38;
+    width : 480px;
+    height : 63px;
+    font-size : 24px;
+    border : 1px solid #979797;
+}
+
+.input-text-row1{
+    font-family : Dense;
+    padding : 15px 17px 15px 17px;
+    color : #9DFF9E;
+    width : 480px;
+    height : 63px;
+    font-size : 24px;
+    border : 1px solid #979797;
+    margin : -63px 0 0 0;
+}
+row2{
+    margin : 0 0 0 20px;
+}
+.pin,.id{
+    color : #607f60;
+}
+.input-pin-row2{
+    margin-top : 7px;
+}
+button{
+    margin-top : 53px;
+    background-color : #bb0000;
+    color : #ffffff;
+    padding : 20px 216px 20px 216px;
+    font-family : Dense;
+    font-size : 24px;
+}
+.px1{
+    width : 400px;
+}
+.px,.footer{
+    display : flex;
+    text-align : center;
+}
+.name{
+    font-size : 35px;
+    color :  ;
+    text-align : left;
+}
+.status{
+    font-size : 24px;
+    text-align : left;
+}
+.distance{
+    font : 20px;
+    text-align : right;
+}
+.remove-btn{
+    color : ;
+    opacity : ;
+    background-color : ;
+    font-size : 24px;
+    padding : 15px 20px 15px 20px;
+}
+.name{
+    color : #00ff51;
+}
+

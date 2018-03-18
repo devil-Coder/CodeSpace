@@ -1,0 +1,40 @@
+.padded-content{
+    font-size : 50px;
+    color : #fff;
+    padding : 2%;
+}
+
+.input-box-reg{
+    font-family : Dense;
+    padding : 17px;
+    opacity : 0.2;
+    color : #9DFF9E;
+    background-color : #675E38;
+    width : 480px;
+    height : 63px;
+    font-size : 24px;
+    border-bottom : 1px solid #979797;
+}
+
+.input-text-reg{
+    font-family : Dense;
+    padding : 15px 17px 15px 17px;
+    color : #9DFF9E;
+    width : 480px;
+    height : 63px;
+        font-size : 24px;
+        border-bottom : 1px solid #979797;
+    margin : -63px 0 0 0;
+}
+.regiment-cont{
+    border : 1px solid #979797;
+}
+.each-reg{
+    display : flex;
+}
+.row2{
+    padding : 70px 0 0 0;
+}
+.header{
+
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> RAW </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <style>
+        @font-face {
+            font-family: Dense;
+            src: url(../assets/fonts/Dense-Regular.otf);
+        }
+
+        body{
+            font-family: Dense;
+            background : url('/images/screenA.jpg') no-repeat;
+            background-color : #000;
+            height : 100%;
+            width : 95%;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Row A -->
+        <div class="col-lg-12 row1">
+            <div class="login-text float-left text-white text-upppercase">Add Regiment</div>
+            <div class="input-text float-right">
+                <div type="text" class="input-box-row1">
+                </div>
+                <div type="text" class="input-text-row1">
+                    <div class="float-left"><span id="hr"></span>:<span id="min"></span>:<span id="sec"></span> PM</div>
+                    <div class="float-right">12.634N, 79.158E</div>
+                    <script >
+                        setInterval(function(){
+                            var d = new Date();
+                            var curr_hour = d.getHours();
+                            var curr_min = d.getMinutes();
+                            document.getElementById('hr').innerHTML = curr_hour;
+                            document.getElementById('min').innerHTML = curr_min;
+                            document.getElementById('sec').innerHTML = d.getSeconds();
+                        },1000);
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 row2" align="center">
+            <!--HEADER-->
+            <div class="center-header">
+                <img src="/images/favicon.png" alt="image" width="290" height="290">
+            </div>
+            <!--Military ID-->
+            <div type="text" class="input-username-row1 centered">
+                <div class="input-text">
+                    <div type="text" class="input-box-row1"></div>
+                    <div type="text" class="input-text-row1">
+                        <div class="float-left text-uppercase text-center id">locate your battlefield</div>
+                    </div>
+                </div>
+            </div>
+            <!--PIN-->
+            <div type="text" class="input-pin-row2 centered">
+                <div class="input-text">
+                    <div type="text" class="input-box-row1">
+                    </div>
+                    <div type="text" class="input-text-row1">
+                        <div class="float-left text-uppercase text-center pin">add regiment</div>
+                    </div>
+                </div>
+                <div class="ap-container">
+                    <div class="px text-uppercase">
+                        <div class="row1 px1">
+                            <div class="name">Raj Chandra</div>
+                            <div class="footer">
+                                    <div class="status float-left">
+                                        <div class="">Status : alive</div>
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="distance float-right">
+                                        <div class="">13.5 <span class="text-lowercase">m</span> Away</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row2 px2">
+                                <button class="btn btn-outline-danger remove-btn text-uppercase">remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
